@@ -1,0 +1,35 @@
+<mvc:View controllerName="learningdev.project1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:smartTable="sap.ui.comp.smarttable"
+    xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+    
+    xmlns="sap.m"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+
+    <Page id="Page_1" title="Customer List">
+        <content>
+
+            <smartFilterBar:SmartFilterBar id="smartFilterBar" entitySet="CustomerMaster">
+                <smartFilterBar:controlConfiguration>
+                    <smartFilterBar:ControlConfiguration key="CustomerGuid"  label="Customer Id" visibleInAdvancedArea="true" preventInitialDataFetchInValueHelpDialog="false"></smartFilterBar:ControlConfiguration>
+                </smartFilterBar:controlConfiguration>
+            </smartFilterBar:SmartFilterBar>
+            
+            <smartTable:SmartTable 
+            id="smartTable_ResponsiveTable" 
+            smartFilterId="smartFilterBar" 
+            tableType="ResponsiveTable" 
+            editable="false" 
+            entitySet="CustomerMaster" 
+            useVariantManagement="false" 
+            useTablePersonalisation="false" 
+            header="Customee data" 
+            showRowCount="true" 
+            enableExport="false" 
+            enableAutoBinding="true">
+            <Table selectionChange="onChangePress" mode="SingleSelectMaster" id="oTable"/>
+            </smartTable:SmartTable>
+        </content>
+    </Page>
+</mvc:View>
