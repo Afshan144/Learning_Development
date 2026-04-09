@@ -1,0 +1,25 @@
+<mvc:View
+	controllerName="learningdev.project1.controller.EmployeeGridList"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:f="sap.f">
+	<Slider value="100" liveChange="onSliderMoved" />
+	<Panel id="panelForGridList" backgroundDesign="Translucent">
+
+		<f:GridList
+			id="gridList"
+			headerText="GridList header"
+			items="{/CustomerMaster}">
+			<f:GridListItem>
+				<VBox class="sapUiSmallMargin">
+					<!-- <layoutData>
+						<FlexItemData growFactor="1" shrinkFactor="0" /> 
+					</layoutData> -->
+
+					<Title text="{firstName}" wrapping="true" />
+					<Label text="{email}" wrapping="true" />
+				</VBox>
+			</f:GridListItem>
+		</f:GridList>
+	</Panel>
+</mvc:View>

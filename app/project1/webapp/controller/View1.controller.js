@@ -21,5 +21,9 @@ sap.ui.define([
            var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
             oRouter.navTo("ProductCreate");
 		},
+         OnPressGridList: function(oEvent) {
+           var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+            oRouter.navTo("EmployeeGridList");
+		},
     });
 });

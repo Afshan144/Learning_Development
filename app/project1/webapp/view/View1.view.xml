@@ -23,6 +23,12 @@
                 subheader="List/Save/Update"
                 press="OnPressSalesOrder"
             />
+            <GenericTile
+                class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+                header="Grid List"
+                subheader="Show"
+                press="OnPressGridList"
+            />
         </content>
     </Page>
 </mvc:View>
