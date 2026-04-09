@@ -1,0 +1,45 @@
+<mvc:View
+    controllerName="learningdev.project1.controller.ProductCreate"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:c="sap.ui.core"
+    displayBlock="true"
+    height="100%"
+    busyIndicatorDelay="0"
+>
+    <Page title="Product List" showFooter="true" showNavButton="true" navButtonPress="OnPressGoHome" >
+        <content>
+            <Table items="{/Products}">
+                <columns>
+                    <Column>
+                        <Text text="Product Title" />
+                    </Column>
+                    <Column>
+                        <Text text="Brand Name" />
+                    </Column>
+                    <Column>
+                        <Text text="stock" />
+                    </Column>
+                    <Column>
+                        <Text text="price" />
+                    </Column>
+                    <Column>
+                        <Text text="Is Active" />
+                    </Column>
+                </columns>
+
+                <items>
+                    <ColumnListItem type="Navigation" press="">
+                        <cells>
+                            <Text text="{ProductIdTitle}" />
+                            <Text text="{Brand}" />
+                            <Text text="{stock}" />
+                            <Text text="{price}" />
+                            <Text text="{IsActive}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>

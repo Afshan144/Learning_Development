@@ -1,1 +1,1 @@
-using Learningervice as service from '../../srv/Service';
+using MasterService as service from '../../srv/Service';

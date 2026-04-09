@@ -5,10 +5,21 @@ sap.ui.define([
     "use strict";
 
     return Controller.extend("learningdev.project1.controller.View1", {
-        onInit() {
-            // var oModel = new ODataModel("/odata/v2/learningervice/");
-            // this.getView().setModel(oModel);
-            console.log(this.getView().getModel());
+        onInit: function () {
+            
         },
+
+		OnPressCustomer: function(oEvent) {
+            var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+            oRouter.navTo("CustomerMasterCreate");
+		},
+        OnPressSalesOrder: function(oEvent) {
+           var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+            oRouter.navTo("SaleOrderCreate");
+		},
+        OnPressProduct: function(oEvent) {
+           var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+            oRouter.navTo("ProductCreate");
+		},
     });
 });

@@ -99,6 +99,9 @@ resources:
     parameters:
       config:
         oauth2-configuration:
+          credential-types:
+            - binding-secret
+            - x509
           redirect-uris:
             - https://*~{app-api/app-uri}/**
         tenant-mode: dedicated

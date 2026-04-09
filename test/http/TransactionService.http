@@ -1,0 +1,71 @@
+@server=http://localhost:4004
+
+
+### Orders
+# @name Orders_GET
+GET {{server}}/odata/v4/transaction/Orders
+
+
+
+### Orders
+# @name Orders_POST
+POST {{server}}/odata/v4/transaction/Orders
+Content-Type: application/json
+
+{
+  "ID": "15325480-3984-4e84-b9c8-9f42645d3af2",
+  "orderNumber": "orderNumber-15325480",
+  "totalPrice": 4312966891673.11,
+  "status": "F",
+  "Items": [
+    {
+      "ID": "4659596b-4615-4e46-a30e-2e6a3724dcb4",
+      "quantity": 97,
+      "netAmount": 6260593829750.2
+    },
+    {
+      "ID": "46595979-9079-4501-82a2-cfdd022056bd",
+      "quantity": 84,
+      "netAmount": 1555436358470.52
+    }
+  ],
+  "createdAt": "2004-01-30T00:00:00.000Z",
+  "createdBy": "createdBy.94h7s@example.net",
+  "modifiedAt": "2020-04-06T00:00:00.000Z",
+  "modifiedBy": "modifiedBy.94h7s@example.org"
+}
+
+
+### Orders
+# @name Orders_PATCH
+PATCH {{server}}/odata/v4/transaction/Orders/15325480-3984-4e84-b9c8-9f42645d3af2
+Content-Type: application/json
+
+{
+  "ID": "15325480-3984-4e84-b9c8-9f42645d3af2",
+  "orderNumber": "orderNumber-15325480",
+  "totalPrice": 4312966891673.11,
+  "status": "F",
+  "Items": [
+    {
+      "ID": "4659596b-4615-4e46-a30e-2e6a3724dcb4",
+      "quantity": 97,
+      "netAmount": 6260593829750.2
+    },
+    {
+      "ID": "46595979-9079-4501-82a2-cfdd022056bd",
+      "quantity": 84,
+      "netAmount": 1555436358470.52
+    }
+  ],
+  "createdAt": "2004-01-30T00:00:00.000Z",
+  "createdBy": "createdBy.94h7s@example.net",
+  "modifiedAt": "2020-04-06T00:00:00.000Z",
+  "modifiedBy": "modifiedBy.94h7s@example.org"
+}
+
+
+### Orders
+# @name Orders_DELETE
+DELETE {{server}}/odata/v4/transaction/Orders/15325480-3984-4e84-b9c8-9f42645d3af2
+Content-Type: application/json

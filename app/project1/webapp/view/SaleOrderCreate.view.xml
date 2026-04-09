@@ -1,0 +1,36 @@
+<mvc:View controllerName="learningdev.project1.controller.SaleOrderCreate"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page title="Order List">
+        <content>
+            <!-- {txnModel>/Orders} -->
+            <Table items="{
+    path: 'txnModel>/Orders',
+    parameters: {
+        $expand: 'Items'
+    }
+}">
+                <columns>
+                    <Column>
+                        <Text text="Order No"/>
+                    </Column>
+                    <Column>
+                        <Text text="Total"/>
+                    </Column>
+                </columns>
+
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{txnModel>OrderNo}"/>
+                            <Text text="{txnModel>Total}"/>
+                            <List items="{txnModel>Itemdetails}">
+                                <StandardListItem title="{txnModel>ProductName}" />
+                            </List>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>

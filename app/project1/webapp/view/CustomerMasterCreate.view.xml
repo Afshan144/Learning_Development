@@ -1,0 +1,45 @@
+<mvc:View
+    controllerName="learningdev.project1.controller.CustomerMasterCreate"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:c="sap.ui.core"
+    displayBlock="true"
+    height="100%"
+    busyIndicatorDelay="0"
+>
+    <Page title="Customer List" showFooter="true" showNavButton="true" navButtonPress="OnPressGoHome" >
+        <content>
+            <Table items="{/CustomerMaster}">
+                <columns>
+                    <Column>
+                        <Text text="First Name" />
+                    </Column>
+                    <Column>
+                        <Text text="Last Name" />
+                    </Column>
+                    <Column>
+                        <Text text="Email" />
+                    </Column>
+                    <Column>
+                        <Text text="Gender" />
+                    </Column>
+                    <Column>
+                        <Text text="Phone" />
+                    </Column>
+                </columns>
+
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{firstName}" />
+                            <Text text="{lastName}" />
+                            <Text text="{email}" />
+                            <Text text="{gender}" />
+                            <Text text="{phone}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>

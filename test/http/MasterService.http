@@ -1,0 +1,230 @@
+@server=http://localhost:4004
+@username=Afshan Ansari
+
+### CustomerMaster
+# @name CustomerMaster_GET
+GET {{server}}/odata/v4/master/CustomerMaster
+
+
+
+### CustomerMaster
+# @name CustomerMaster_POST
+POST {{server}}/odata/v4/master/CustomerMaster
+Content-Type: application/json
+
+{
+  "firstName": "Monish",
+  "lastName": "Qureshi",
+  "email": "monishqureshi1001@gmail.com",
+  "phone": "991977201",
+  "dateOfBirth": "1996-04-16",
+  "gender": "M",
+  "loyaltyPoints": 73
+}
+
+
+### CustomerMaster
+# @name CustomerMaster_PATCH
+PATCH {{server}}/odata/v4/master/CustomerMaster/12872829-960e-46e0-b3c0-d9354af47efc
+Content-Type: application/json
+
+{
+  "ID": "12872829-960e-46e0-b3c0-d9354af47efc",
+  "firstName": "firstName-12872829",
+  "lastName": "lastName-12872829",
+  "email": "Install package 'randexp' to create data for regex ^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$",
+  "phone": "phone-12872829",
+  "dateOfBirth": "2017-03-18",
+  "gender": "M",
+  "loyaltyPoints": 73,
+  "createdAt": "2015-04-23T00:00:00.000Z",
+  "createdBy": "createdBy.7nwql@example.org",
+  "modifiedAt": "2019-02-09T00:00:00.000Z",
+  "modifiedBy": "modifiedBy.7nwql@example.org"
+}
+
+
+### CustomerMaster
+# @name CustomerMaster_DELETE
+DELETE {{server}}/odata/v4/master/CustomerMaster/12872829-960e-46e0-b3c0-d9354af47efc
+Content-Type: application/json
+
+
+### Products
+# @name Products_GET
+GET {{server}}/odata/v4/master/Products
+
+
+
+
+### Products
+# @name Products_POST
+POST {{server}}/odata/v4/master/Products
+Content-Type: application/json
+
+{
+  "ProductIdTitle": "Winter Suits party wear",
+  "description": "Winter Suits party wear",
+  "stock": 6,
+  "price":850,
+  "currency_code": "INR",
+  "UnitPrice":500,
+  "CostPrice": 200,
+  "StockQuantity": 76,
+  "Brand": "WaseemCloth",
+  "IsActive": true,
+  "category_CatId":"c48bd529-d1e9-47f1-a50f-660fbe3c806a",
+  "supplier_ID":"GST_23456789"
+}
+
+
+### Products
+# @name Products_PATCH
+PATCH {{server}}/odata/v4/master/Products/22183692-965f-4c3c-ad61-ed71bb6986d1
+Content-Type: application/json
+
+{
+  "ProductId": "22183692-965f-4c3c-ad61-ed71bb6986d1",
+  "ProductIdTitle": "ProductIdTitle-22183692",
+  "description": "description-22183692",
+  "stock": 36,
+  "price": 7000782550822.22,
+  "currency": {
+    "code": "489"
+  },
+  "UnitPrice": 93,
+  "CostPrice": 65,
+  "StockQuantity": 76,
+  "Brand": "Brand-22183692",
+  "IsActive": true,
+  "category": {
+    "CatId": "28286415-e6d1-42b5-bf4e-7659d2b2a9a4"
+  },
+  "supplier": {
+    "ID": "25298762-e039-4802-849a-1f02f55e6179"
+  },
+  "createdAt": "2008-05-25T00:00:00.000Z",
+  "createdBy": "createdBy.d7h1o@example.net",
+  "modifiedAt": "2022-07-14T00:00:00.000Z",
+  "modifiedBy": "modifiedBy.d7h1o@example.com"
+}
+
+
+### Products
+# @name Products_DELETE
+DELETE {{server}}/odata/v4/master/Products/22183692-965f-4c3c-ad61-ed71bb6986d1
+Content-Type: application/json
+
+
+### Currencies
+# @name Currencies_GET
+GET {{server}}/odata/v4/master/Currencies
+
+
+
+### Categories
+# @name Categories_GET
+GET {{server}}/odata/v4/master/Categories
+
+
+
+### Categories
+# @name Categories_POST
+POST {{server}}/odata/v4/master/Categories
+Content-Type: application/json
+
+{
+  "Catname": "Fancy Drass",
+  "CatDescription": "Fancy Drass for Girls and Woman",
+  "image": null
+}
+
+
+### Categories
+# @name Categories_PATCH
+PATCH {{server}}/odata/v4/master/Categories/c48bd529-d1e9-47f1-a50f-660fbe3c806a
+Content-Type: application/json
+
+{
+  "Catname": "Woolen Suits",
+  "CatDescription": "Woolen Suits for winter girls and woman",
+  "image": null
+}
+
+
+### Categories
+# @name Categories_DELETE
+DELETE {{server}}/odata/v4/master/Categories/28286415-e6d1-42b5-bf4e-7659d2b2a9a4
+Content-Type: application/json
+
+
+### Suppliers
+# @name Suppliers_GET
+GET {{server}}/odata/v4/master/Suppliers
+
+
+
+### Suppliers
+# @name Suppliers_POST
+POST {{server}}/odata/v4/master/Suppliers
+Content-Type: application/json
+
+{
+  "ID": "25298762-e039-4802-849a-1f02f55e6179",
+  "companyName": "companyName-25298762",
+  "contactPerson": "contactPerson-25298762",
+  "email": "email-25298762",
+  "phone": "phone-25298762",
+  "gstin": "gstin-25298762",
+  "address": "address-25298762",
+  "city": "city-25298762",
+  "country": {
+    "code": "522"
+  },
+  "paymentTerms": "NET60",
+  "createdAt": "2001-06-06T00:00:00.000Z",
+  "createdBy": "createdBy.f28ne@example.org",
+  "modifiedAt": "2005-07-21T00:00:00.000Z",
+  "modifiedBy": "modifiedBy.f28ne@example.org"
+}
+
+
+### Suppliers
+# @name Suppliers_PATCH
+PATCH {{server}}/odata/v4/master/Suppliers/25298762-e039-4802-849a-1f02f55e6179
+Content-Type: application/json
+
+{
+  "ID": "25298762-e039-4802-849a-1f02f55e6179",
+  "companyName": "companyName-25298762",
+  "contactPerson": "contactPerson-25298762",
+  "email": "email-25298762",
+  "phone": "phone-25298762",
+  "gstin": "gstin-25298762",
+  "address": "address-25298762",
+  "city": "city-25298762",
+  "country": {
+    "code": "522"
+  },
+  "paymentTerms": "NET60",
+  "createdAt": "2001-06-06T00:00:00.000Z",
+  "createdBy": "createdBy.f28ne@example.org",
+  "modifiedAt": "2005-07-21T00:00:00.000Z",
+  "modifiedBy": "modifiedBy.f28ne@example.org"
+}
+
+
+### Suppliers
+# @name Suppliers_DELETE
+DELETE {{server}}/odata/v4/master/Suppliers/25298762-e039-4802-849a-1f02f55e6179
+Content-Type: application/json
+
+
+### Countries
+# @name Countries_GET
+GET {{server}}/odata/v4/master/Countries
+
+### Get Products in Hindi
+# @name Products_GET_Hindi
+GET {{server}}/odata/v4/master/Products
+Accept-Language: hi

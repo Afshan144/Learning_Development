@@ -27,12 +27,9 @@
   },
   "private": true,
   "cds": {
-    
     "requires": {
-      "[production]": {
-        "auth": "mocked",
-        "db": "hana"
-      },
+      "auth": "xsuaa",
+      "db": "hana",
       "destinations": true,
       "html5-repo": true
     }
